@@ -49,7 +49,9 @@ export class Hero extends LitElement {
             </p>
 
             <div class="mt-5 flex flex-col gap-4">
-              <a href="#top-7-section" class="rounded-sm bg-white px-4 py-2 text-center font-medium text-black transition-all duration-200 hover:scale-95 md:text-lg lg:px-6 lg:text-xl">Let’s Play!</a>
+              <a href="#contact-us-section" class="rounded-sm bg-white px-4 py-2 text-center font-medium text-black transition-all duration-200 hover:scale-95 md:text-lg lg:px-6 lg:text-xl">
+                Let’s Play!
+              </a>
 
               <div class="h-1.5 w-full rounded-2xl bg-white"></div>
             </div>

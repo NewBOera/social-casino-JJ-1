@@ -24,7 +24,6 @@
   margin-bottom: 1.5rem;
   color: white;
   font-weight: 700;
-  font-family: 'Times New Roman', serif;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   text-align: start;
@@ -154,7 +153,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
   display: none;
   justify-content: center;
   align-items: center;
@@ -163,62 +162,74 @@
 }
 
 .popup-content {
-  background: linear-gradient(135deg, #0c8599, #065666);
-  padding: 3rem;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  padding: 3.5rem;
+  border-radius: 15px;
   text-align: center;
   max-width: 520px;
   width: 90%;
-  box-shadow: 0 8px 32px rgba(12, 133, 153, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.2);
   animation: fadeIn 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffa500);
 }
 
 .popup-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: white;
+  color: #ffd700;
   font-weight: 700;
-  font-family: 'Times New Roman', serif;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .popup-text {
   margin-bottom: 2.5rem;
-  color: #e0e0e0;
+  color: #ffffff;
   line-height: 1.7;
   font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
 
 .button-group {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
 .btn {
   padding: 1rem 2.5rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  text-transform: none;
-  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn-yes {
-  background: #38b2ac;
-  color: white;
-  box-shadow: 0 4px 15px rgba(56, 178, 172, 0.3);
+  background: linear-gradient(135deg, #f5d081, #ffa500);
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .btn-no {
   background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #ffd700;
+  border: 2px solid #ffd700;
 }
 
 .btn:hover {
@@ -226,15 +237,13 @@
 }
 
 .btn-yes:hover {
-  background: #319795;
-  box-shadow: 0 6px 20px rgba(56, 178, 172, 0.4);
-  cursor: pointer;
+  background: linear-gradient(135deg, #ffa500, #f5d081);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 
 .btn-no:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.05);
-  cursor: pointer;
+  border-color: #ffa500;
+  background: rgba(255, 215, 0, 0.1);
 }
 
 @keyframes fadeIn {

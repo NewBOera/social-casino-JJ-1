@@ -7,10 +7,26 @@
 
     <link rel="shortcut icon" href="/public/assets/navbar/logo.png" type="image/x-icon" />
 
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="[change DOMAIN] is a website to play free social casino games.
+
+    The website is divided into sections like Hero Title, About Us, What we offer?, Games and Contact Us.
+    
+    Hero: This section provides a full description of the services offered in the website.
+    
+    About Us: This section describes the features, category of its area of expertise and also describes its target audience.
+    
+    What We Offer: This section describes the benefits for all the players of the social casino site.
+    
+    Games: This section presents the social casino games that players can enjoy.
+    
+    Contact Us: This section provides a description of the purpose and the form where the users and players can contact us.
+    "
+    />
     <meta name="author" content="[change_NAME]" />
-    <meta name="created" content="January 2025" />
-    <meta name="modified" content="January 2025" />
+    <meta name="created" content="February 2025" />
+    <meta name="modified" content="February 2025" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,8 +36,8 @@
     <link rel="stylesheet" href="/public/styles/globals.css" />
     <link rel="stylesheet" href="/public/styles/output.css" />
 
-    <!-- <link rel="stylesheet" href="/public/styles/popup.css" />
-    <script src="/public/scripts/popup.js"></script> -->
+    <link rel="stylesheet" href="/public/styles/popup.css" />
+    <script src="/public/scripts/popup.js"></script>
 
     <!-- Components -->
     <script src="/src/components/NavbarMobile.js" type="module"></script>
@@ -36,28 +52,27 @@
     <script src="/src/ui/Contact.js" type="module"></script>
   </head>
   <body>
-    <!-- <div class="age-verification" id="ageVerification">
+    <div class="age-verification" id="ageVerification">
       <div class="popup-content">
-        <h2 class="popup-title">+18 of Age</h2>
-        <p class="popup-text">Are you legally of age to access this website?</p>
+        <p class="popup-text">This website is intended for persons over 18 years of age only. Please, confirm that you’re 18 or older.</p>
         <div class="button-group">
-          <button class="btn btn-yes" onclick="modalManager.verifyModal('ageVerification', true)">Yes I am</button>
-          <button class="btn btn-no" onclick="modalManager.verifyModal('ageVerification', false, 'https://www.google.com')">Not Yet</button>
+          <button class="btn btn-yes" onclick="modalManager.verifyModal('ageVerification', true)">Yes, I am</button>
+          <button class="btn btn-no" onclick="modalManager.verifyModal('ageVerification', false, 'https://www.google.com')">No, I’m not</button>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <!-- <div class="cookies-modal hidden" id="cookiesModal">
+    <div class="cookies-modal hidden" id="cookiesModal">
       <article>
-        <h2 class="cookies-title">Cookies Disclaimer:</h2>
-        <p class="cookies-text">Our website uses cookies to improve your user experience. Please choose your preferences.</p>
+        <h2 class="cookies-title font-Kulim">COOKIES DISCLAIMER</h2>
+        <p class="cookies-text">This website uses cookies to enhance your experience. Please, accept cookies for optimal performance.</p>
       </article>
 
       <div class="cookies-buttons">
-        <button class="btn-yes btn" onclick="modalManager.verifyModal('cookiesModal', true)">Accept cookies</button>
-        <button class="btn-no btn" onclick="modalManager.verifyModal('cookiesModal', false)">Reject cookies</button>
+        <button class="btn-yes btn" onclick="modalManager.verifyModal('cookiesModal', true)">I accept cookies</button>
+        <button class="btn-no btn" onclick="modalManager.verifyModal('cookiesModal', false)">Decline cookies</button>
       </div>
-    </div> -->
+    </div>
 
     <div id="thank-you" class="fixed inset-0 z-50 flex hidden h-screen items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm">
       <div class="m-4 w-full max-w-2xl rounded-3xl bg-white p-8">
@@ -194,7 +209,7 @@
       </div>
     </div>
 
-    <div id="terms-conditions" class="fixed inset-0 z-50 flex h-screen items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm">
+    <div id="terms-conditions" class="fixed inset-0 z-50 flex hidden h-screen items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm">
       <div class="relative m-4 h-screen max-h-[600px] w-full max-w-[900px] overflow-y-auto rounded-3xl bg-white p-8">
         <div class="flex flex-col items-center text-center">
           <div class="mb-6">
@@ -267,7 +282,11 @@
 
       <div id="about-section" class="relative grid place-content-center overflow-x-hidden">
         <about-section></about-section>
-        <cards-section></cards-section>
+      </div>
+
+      <cards-section></cards-section>
+
+      <div id="games-section">
         <games-section></games-section>
       </div>
 
@@ -276,7 +295,7 @@
       </div>
     </main>
 
-    <footer-element is-landing="true"></footer-element>
+    <footer-element></footer-element>
 
     <script>
       function closeThankYouModal() {

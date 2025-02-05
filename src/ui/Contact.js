@@ -229,7 +229,7 @@ export class BookingForm extends LitElement {
         }
       </style>
 
-      <section class="flex items-center justify-center">
+      <section class="mb-12 flex items-center justify-center">
         <div class="mx-auto flex w-full flex-col items-center gap-6 px-2 md:w-[768px] md:gap-8 md:px-10 lg:w-[1024px] lg:gap-10 lg:px-12 xl:w-[1280px] xl:gap-12 xl:px-14 2xl:w-[1400px] 2xl:px-16">
           <article class="w-full">
             <h3 class="text-golden font-Kulim text-center font-light xl:text-lg 2xl:text-xl">Do You Need Help With Our Social Casino Games? Let’s Talk!</h3>
@@ -281,7 +281,7 @@ export class BookingForm extends LitElement {
               <button
                 id="submitButton"
                 type="submit"
-                class="text-primary-600 w-full max-w-max border-b-2 border-[#FF0000] bg-transparent px-4 py-1 font-medium transition-all duration-200 hover:scale-[0.98] lg:w-auto lg:px-8"
+                class="text-primary-600 w-full max-w-max border-b-2 border-[#FF0000] bg-transparent px-4 py-1 font-medium transition-all duration-200 hover:scale-105 lg:w-auto lg:px-8"
               >
                 <span class="text-lg xl:text-xl">Submit</span>
               </button>

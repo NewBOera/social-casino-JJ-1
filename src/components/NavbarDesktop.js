@@ -58,7 +58,7 @@ export class NavbarDesktop extends LitElement {
       threshold: 0,
     };
 
-    const sections = ['hero-section', 'about-section', 'why-us-section', 'top-7-section', 'faq-section'];
+    const sections = ['hero-section', 'about-section', 'why-us-section', 'games-section', 'contact-us-section'];
 
     sections.forEach(sectionId => {
       const section = document.getElementById(sectionId);
@@ -114,29 +114,15 @@ export class NavbarDesktop extends LitElement {
 
       <header class="fixed z-40 hidden w-full items-center justify-center text-white shadow-sm backdrop-blur-3xl md:inline-flex">
         <div class="w-full border-b-[1px] border-l-[1px] border-r-[1px] border-white sm:w-[640px] md:w-[768px] lg:w-[1024px] lg:px-0 xl:w-[1280px] 2xl:w-[1300px]">
-          <nav class="flex w-full justify-between">
+          <nav class="flex h-[80px] w-full justify-between">
             <div class="flex flex-grow-0 items-center border-r-[1px] border-white px-4">
               <a href="${this.getNavItemHref('hero-section')}" @click="${e => this.handleNavClick(e, 'hero-section')}">
-                <img id="navbar-logo" class="size-12 shrink-0 object-contain" src="/public/assets/navbar/logo.png" alt="Best 10 UK Spots logo" title="Best 10 UK Spots" />
+                <img id="navbar-logo" class="size-12 shrink-0 object-contain" src="/public/assets/navbar/logo.png" alt="[change_NAME]" title="[change_NAME]" />
               </a>
             </div>
 
-            <div class="flex-grow-1 flex w-full flex-col gap-3 py-2">
-              <div class="flex w-full justify-end">
-                <span class="px-4">Street</span>
-                <div class="flex items-center gap-2 border-l-[1px] border-white px-4">
-                  <a href="" class="transition-all duration-200 hover:scale-105">
-                    <img src="/public/assets/navbar/facebook.png" class="size-5" alt="" />
-                  </a>
-                  <a href="" class="transition-all duration-200 hover:scale-105">
-                    <img src="/public/assets/navbar/x.png" class="size-5" alt="" />
-                  </a>
-                  <a href="" class="transition-all duration-200 hover:scale-105">
-                    <img src="/public/assets/navbar/instagram.png" class="size-5" alt="" />
-                  </a>
-                </div>
-              </div>
-              <div class="flex justify-end border-t-[1px] border-white py-2 pr-20">
+            <div class="flex-grow-1 flex w-full flex-col justify-center gap-3">
+              <div class="flex justify-end py-2 pr-20">
                 <ul id="nav-items" class="flex justify-center gap-10 xl:gap-20">
                   <li class="nav-item ${this.activeSection === 'hero-section' ? 'active' : ''} transition-all duration-200" id-nav="hero-section">
                     <a href="${this.getNavItemHref('hero-section')}" @click="${e => this.handleNavClick(e, 'hero-section')}">HOME</a>

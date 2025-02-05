@@ -15,25 +15,25 @@ export class About extends LitElement {
         <div class="3xl:px-0 flex w-full flex-col gap-12 overflow-x-hidden px-20 sm:w-[640px] sm:px-24 md:w-[768px] md:px-32 lg:w-[1024px] lg:px-36 xl:w-[1280px] 2xl:w-[1300px]">
           <img
             src="/public/assets/about-us/dices.png"
-            class="xss:-left-[75%] xs:-left-[80%] absolute -left-[75%] h-full object-contain sm:-left-[40%] md:-left-[30%] lg:-left-[10%] xl:-left-[10%] 2xl:hidden"
+            class="xss:-left-[75%] xs:-left-[80%] absolute -left-[75%] h-full object-contain sm:-left-[40%] md:-left-[30%] lg:-left-[15%] xl:-left-[10%] 2xl:hidden"
             alt=""
           />
 
-          <img src="/public/assets/about-us/dices-complete.png" class="3xl:left-16 absolute top-1/2 hidden h-[280px] -translate-y-1/2 object-contain 2xl:left-0 2xl:block" alt="" />
+          <img src="/public/assets/about-us/dices-complete.png" class="3xl:left-16 absolute top-1/2 hidden h-[280px] -translate-y-1/2 object-contain 2xl:left-0 2xl:!block" alt="" />
 
           <img
             src="/public/assets/about-us/cards.png"
-            class="xss:-right-[90%] xs:-right-[85%] absolute -right-[85%] h-full object-contain sm:-right-[40%] md:-right-[30%] lg:-right-[10%] xl:-right-[10%] 2xl:hidden"
+            class="xss:-right-[90%] xs:-right-[85%] absolute -right-[85%] h-full object-contain sm:-right-[40%] md:-right-[30%] lg:-right-[15%] xl:-right-[10%] 2xl:hidden"
             alt=""
           />
 
-          <img src="/public/assets/about-us/cards.png" class="3xl:right-16 absolute top-1/2 hidden h-[300px] -translate-y-1/2 object-contain 2xl:right-0 2xl:block" alt="" />
+          <img src="/public/assets/about-us/cards.png" class="3xl:right-16 absolute top-1/2 hidden h-[300px] -translate-y-1/2 object-contain 2xl:right-0 2xl:!block" alt="" />
 
           <article class="flex items-center justify-between">
             <div class="h-0.5 w-full flex-grow rounded-2xl bg-white"></div>
 
             <div class="flex-grow-0 border-x-[2px] px-4">
-              <h3 class="text-golden font-Kulim text-center font-light xl:text-lg 2xl:text-xl">This Is The Perfect Spot to Play Social Casino Games</h3>
+              <h3 class="text-golden font-Kulim text-center font-light xl:text-lg 2xl:text-xl">Delivering Social Fun</h3>
             </div>
 
             <div class="h-0.5 w-full flex-grow rounded-2xl bg-white"></div>

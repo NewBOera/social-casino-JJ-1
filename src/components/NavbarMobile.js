@@ -70,9 +70,9 @@ export class NavbarMobile extends LitElement {
 
         <div
           id="menu"
-          class="bg-menu-navbar transition-menu navbar-menu ${this.isMenuOpen
+          class="transition-menu navbar-menu ${this.isMenuOpen
             ? 'menu-open'
-            : 'menu-closed'} absolute left-0 right-0 top-0 z-50 flex h-screen min-h-[800px] w-full flex-col justify-center gap-12 px-8 text-[#FFFFFF] shadow-md lg:hidden"
+            : 'menu-closed'} absolute left-0 right-0 top-0 z-50 flex h-screen min-h-[800px] w-full flex-col justify-center gap-12 bg-black px-8 text-[#FFFFFF] opacity-95 shadow-md lg:hidden"
         >
           <img
             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTIgMmM1LjUzIDAgMTAgNC40NyAxMCAxMHMtNC40NyAxMC0xMCAxMFMyIDE3LjUzIDIgMTJTNi40NyAyIDEyIDJtMy41OSA1TDEyIDEwLjU5TDguNDEgN0w3IDguNDFMMTAuNTkgMTJMNyAxNS41OUw4LjQxIDE3TDEyIDEzLjQxTDE1LjU5IDE3TDE3IDE1LjU5TDEzLjQxIDEyTDE3IDguNDF6Ii8+PC9zdmc+"
@@ -83,8 +83,8 @@ export class NavbarMobile extends LitElement {
           />
           <ul class="flex w-full flex-col gap-10">
             <li class="w-full">
-              <a href="${this.isLanding ? '#home-section' : 'index.html'}" class="flex items-center justify-between text-lg" @click="${this.closeMenu}">
-                <span>Home</span>
+              <a href="${this.isLanding ? '#hero-section' : 'index.html'}" class="flex items-center justify-between text-lg" @click="${this.closeMenu}">
+                <span>HOME</span>
                 <img
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
                   alt="Arrow icon"
@@ -94,7 +94,7 @@ export class NavbarMobile extends LitElement {
             </li>
             <li class="w-full">
               <a href="${this.isLanding ? '#about-section' : 'index.html#about-section'}" class="flex items-center justify-between text-lg" @click="${this.closeMenu}">
-                <span>About Us</span>
+                <span>ABOUT US</span>
                 <img
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
                   alt="Arrow icon"
@@ -103,8 +103,8 @@ export class NavbarMobile extends LitElement {
               </a>
             </li>
             <li class="w-full">
-              <a href="${this.isLanding ? '#why-us-section' : 'index.html#why-us-section'}" class="flex items-center justify-between text-lg" @click="${this.closeMenu}">
-                <span>Why Us?</span>
+              <a href="${this.isLanding ? '#games-section' : 'index.html#games-section'}" class="flex items-center justify-between text-lg" @click="${this.closeMenu}">
+                <span>GAME</span>
                 <img
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
                   alt="Arrow icon"
@@ -113,8 +113,8 @@ export class NavbarMobile extends LitElement {
               </a>
             </li>
             <li class="w-full">
-              <a href="${this.isLanding ? '#top-7-section' : 'index.html#top-7-section'}" class="flex items-center justify-between text-lg" @click="${this.closeMenu}">
-                <span>Top 7</span>
+              <a href="${this.isLanding ? '#contact-us-section' : 'index.html#contact-us-section'}" class="flex items-center justify-between text-lg" @click="${this.closeMenu}">
+                <span>CONTACT US</span>
                 <img
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
                   alt="Arrow icon"
