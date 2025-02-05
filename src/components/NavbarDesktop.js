@@ -18,7 +18,7 @@ export class NavbarDesktop extends LitElement {
       display: block;
     }
     .active {
-      color: #153131;
+      color: #ffffff;
       font-weight: bolder;
     }
   `;
@@ -112,39 +112,43 @@ export class NavbarDesktop extends LitElement {
       <link rel="stylesheet" href="/public/styles/output.css" />
       <link rel="stylesheet" href="/public/styles/globals.css" />
 
-      <header class="hidden text-black justify-center items-center md:inline-flex fixed z-50 w-full bg-[#FFFFFF] font-Peridot shadow-sm">
-        <div class="sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] w-full px-4 sm:px-6 md:px-8 lg:px-4">
-          <nav class="flex justify-between items-center rounded-xl h-[80px] w-full px-5">
-            <div class="flex items-center flex-grow-0">
-              <div class="font-normal text-lg flex gap-2 items-center">
-                <a href="${this.getNavItemHref('hero-section')}" @click="${e => this.handleNavClick(e, 'hero-section')}">
-                  <img id="navbar-logo" class="object-contain size-12 shrink-0" src="/public/assets/navbar/logo.webp" alt="Best 10 UK Spots logo" title="Best 10 UK Spots" />
-                </a>
-              </div>
+      <header class="fixed z-40 hidden w-full items-center justify-center text-white shadow-sm backdrop-blur-3xl md:inline-flex">
+        <div class="w-full border-b-[1px] border-l-[1px] border-r-[1px] border-white sm:w-[640px] md:w-[768px] lg:w-[1024px] lg:px-0 xl:w-[1280px] 2xl:w-[1300px]">
+          <nav class="flex w-full justify-between">
+            <div class="flex flex-grow-0 items-center border-r-[1px] border-white px-4">
+              <a href="${this.getNavItemHref('hero-section')}" @click="${e => this.handleNavClick(e, 'hero-section')}">
+                <img id="navbar-logo" class="size-12 shrink-0 object-contain" src="/public/assets/navbar/logo.png" alt="Best 10 UK Spots logo" title="Best 10 UK Spots" />
+              </a>
             </div>
 
-            <div class="flex-grow-1">
-              <div class="font-normal">
+            <div class="flex-grow-1 flex w-full flex-col gap-3 py-2">
+              <div class="flex w-full justify-end">
+                <span class="px-4">Street</span>
+                <div class="flex items-center gap-2 border-l-[1px] border-white px-4">
+                  <a href="" class="transition-all duration-200 hover:scale-105">
+                    <img src="/public/assets/navbar/facebook.png" class="size-5" alt="" />
+                  </a>
+                  <a href="" class="transition-all duration-200 hover:scale-105">
+                    <img src="/public/assets/navbar/x.png" class="size-5" alt="" />
+                  </a>
+                  <a href="" class="transition-all duration-200 hover:scale-105">
+                    <img src="/public/assets/navbar/instagram.png" class="size-5" alt="" />
+                  </a>
+                </div>
+              </div>
+              <div class="flex justify-end border-t-[1px] border-white py-2 pr-20">
                 <ul id="nav-items" class="flex justify-center gap-10 xl:gap-20">
-                  <li class="transition-all duration-200 nav-item ${this.activeSection === 'hero-section' ? 'active' : ''}" id-nav="hero-section">
-                    <a href="${this.getNavItemHref('hero-section')}" @click="${e => this.handleNavClick(e, 'hero-section')}">Home</a>
+                  <li class="nav-item ${this.activeSection === 'hero-section' ? 'active' : ''} transition-all duration-200" id-nav="hero-section">
+                    <a href="${this.getNavItemHref('hero-section')}" @click="${e => this.handleNavClick(e, 'hero-section')}">HOME</a>
                   </li>
-                  <li class="transition-all duration-200 nav-item ${this.activeSection === 'about-section' ? 'active' : ''}" id-nav="about-section">
-                    <a href="${this.getNavItemHref('about-section')}" @click="${e => this.handleNavClick(e, 'about-section')}">About Us</a>
+                  <li class="nav-item ${this.activeSection === 'about-section' ? 'active' : ''} transition-all duration-200" id-nav="about-section">
+                    <a href="${this.getNavItemHref('about-section')}" @click="${e => this.handleNavClick(e, 'about-section')}">ABOUT US</a>
                   </li>
-                  <li class="transition-all duration-200 nav-item ${this.activeSection === 'why-us-section' ? 'active' : ''}" id-nav="why-us-section">
-                    <a href="${this.getNavItemHref('why-us-section')}" @click="${e => this.handleNavClick(e, 'why-us-section')}">Why Us?</a>
+                  <li class="nav-item ${this.activeSection === 'games-section' ? 'active' : ''} transition-all duration-200" id-nav="games-section">
+                    <a href="${this.getNavItemHref('games-section')}" @click="${e => this.handleNavClick(e, 'games-section')}">GAMES</a>
                   </li>
-                  <li class="transition-all duration-200 nav-item ${this.activeSection === 'top-7-section' ? 'active' : ''}" id-nav="top-7-section">
-                    <a href="${this.getNavItemHref('top-7-section')}" @click="${e => this.handleNavClick(e, 'top-7-section')}">Top 7</a>
-                  </li>
-                  <li class="transition-all duration-200 nav-item ${this.activeSection === 'faq-section' ? 'active' : ''}" id-nav="faq-section">
-                    <a href="${this.getNavItemHref('faq-section')}" @click="${e => this.handleNavClick(e, 'faq-section')}">F.A.Q</a>
-                  </li>
-                  <li>
-                    <a href="/booking.html" class="bg-[#0F0F0F] hover:scale-105 transition-all duration-200 py-2 px-5 rounded-full text-white">
-                      <span class="font-medium">Contact Us</span>
-                    </a>
+                  <li class="nav-item ${this.activeSection === 'contact-us-section' ? 'active' : ''} transition-all duration-200" id-nav="contact-us-section">
+                    <a href="${this.getNavItemHref('contact-us-section')}" @click="${e => this.handleNavClick(e, 'contact-us-section')}">CONTACT US</a>
                   </li>
                 </ul>
               </div>

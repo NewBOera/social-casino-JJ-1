@@ -9,6 +9,11 @@ module.exports = {
       fontFamily: {
         Kulim: ['Kulim Park', 'sans-serif'],
       },
+      screens: {
+        xss: '460px',
+        xs: '475px',
+        '3xl': '1650px',
+      },
     },
   },
   plugins: [],
