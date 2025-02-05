@@ -21,8 +21,8 @@ const cookieManager = {
 
 const modalManager = {
   modals: {
-    ageVerification: { cookieName: '[change_DOMAIN]_age', expirationDays: 2 },
-    cookiesModal: { cookieName: '[change_DOMAIN]_cookies', expirationDays: 3 },
+    ageVerification: { cookieName: 'topukexperience.com_age', expirationDays: 2 },
+    cookiesModal: { cookieName: 'topukexperience.com_cookies', expirationDays: 3 },
   },
 
   init() {

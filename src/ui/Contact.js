@@ -92,7 +92,7 @@ export class BookingForm extends LitElement {
   }
 
   async sendForm() {
-    const GOOGLE_ENPOINT = 'https://script.google.com/macros/s/AKfycbxRFMEQDlUoHs_8FbBb90kRxhJyn-Bhmv-dhYwB9UM9XAC0sAsqG7yty1Tvb4Y8NFEh/exec';
+    const GOOGLE_ENPOINT = 'https://script.google.com/macros/s/AKfycbzq1xBo9Rn7cAZMevUr2EjxlNGraWptbR6jWoct34D7Ae57hwsyeSaXPOGs5ohNcLZM/exec';
 
     const form = this.querySelector('#bookingForm');
     const submitBtn = this.querySelector('#submitButton');
@@ -178,16 +178,6 @@ export class BookingForm extends LitElement {
         input.classList.add('error');
         window.iziToast.warning({
           message: 'First name must be between 3 and 50 characters',
-          position: 'topRight',
-        });
-      }
-
-      // Last name validation
-      if (input.name === 'lastName' && (input.value.length < 3 || input.value.length > 60)) {
-        isValid = false;
-        input.classList.add('error');
-        window.iziToast.warning({
-          message: 'Last name must be between 3 and 60 characters',
           position: 'topRight',
         });
       }

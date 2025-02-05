@@ -47,8 +47,8 @@ export class About extends LitElement {
             </p>
 
             <p class="kyiv-font text-center xl:text-lg">
-              At [change_DOMAIN] we offer you a great selection of the best social casino for your entertainment. This is a special selection of the best games to fill the thrill of the casino gaming
-              without leaving your home and without risking real money! Here you’ll find:
+              At topukexperience.com we offer you a great selection of the best social casino for your entertainment. This is a special selection of the best games to fill the thrill of the casino
+              gaming without leaving your home and without risking real money! Here you’ll find:
             </p>
 
             <ul class="kyiv-font ml-5 list-disc xl:text-lg">

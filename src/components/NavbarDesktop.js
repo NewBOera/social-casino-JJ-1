@@ -117,7 +117,7 @@ export class NavbarDesktop extends LitElement {
           <nav class="flex h-[80px] w-full justify-between">
             <div class="flex flex-grow-0 items-center border-r-[1px] border-white px-4">
               <a href="${this.getNavItemHref('hero-section')}" @click="${e => this.handleNavClick(e, 'hero-section')}">
-                <img id="navbar-logo" class="size-12 shrink-0 object-contain" src="/public/assets/navbar/logo.png" alt="[change_NAME]" title="[change_NAME]" />
+                <img id="navbar-logo" class="size-12 shrink-0 object-contain" src="/public/assets/navbar/logo.png" alt="Top UK Experience" title="Top UK Experience" />
               </a>
             </div>
 
