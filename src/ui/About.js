@@ -14,20 +14,20 @@ export class About extends LitElement {
       <section id="about-section" class="flex items-center justify-center overflow-x-hidden xl:w-[1280px] 2xl:w-[1300px]">
         <div class="3xl:px-0 flex w-full flex-col gap-12 overflow-x-hidden px-20 sm:w-[640px] sm:px-24 md:w-[768px] md:px-32 lg:w-[1024px] lg:px-36 xl:w-[1280px] 2xl:w-[1300px]">
           <img
-            src="/public/assets/about-us/dices.png"
+            src="/public/assets/about-us/dices.webp"
             class="xss:-left-[75%] xs:-left-[80%] absolute -left-[75%] h-full object-contain sm:-left-[40%] md:-left-[30%] lg:-left-[15%] xl:-left-[10%] 2xl:hidden"
             alt=""
           />
 
-          <img src="/public/assets/about-us/dices-complete.png" class="3xl:left-16 absolute top-1/2 hidden h-[280px] -translate-y-1/2 object-contain 2xl:left-0 2xl:!block" alt="" />
+          <img src="/public/assets/about-us/dices-complete.webp" class="3xl:left-16 absolute top-1/2 hidden h-[280px] -translate-y-1/2 object-contain 2xl:left-0 2xl:!block" alt="" />
 
           <img
-            src="/public/assets/about-us/cards.png"
+            src="/public/assets/about-us/cards.webp"
             class="xss:-right-[90%] xs:-right-[85%] absolute -right-[85%] h-full object-contain sm:-right-[40%] md:-right-[30%] lg:-right-[15%] xl:-right-[10%] 2xl:hidden"
             alt=""
           />
 
-          <img src="/public/assets/about-us/cards.png" class="3xl:right-16 absolute top-1/2 hidden h-[300px] -translate-y-1/2 object-contain 2xl:right-0 2xl:!block" alt="" />
+          <img src="/public/assets/about-us/cards.webp" class="3xl:right-16 absolute top-1/2 hidden h-[300px] -translate-y-1/2 object-contain 2xl:right-0 2xl:!block" alt="" />
 
           <article class="flex items-center justify-between">
             <div class="h-0.5 w-full flex-grow rounded-2xl bg-white"></div>

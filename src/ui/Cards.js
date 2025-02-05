@@ -12,27 +12,27 @@ export class Cards extends LitElement {
   render() {
     const CARDS = [
       {
-        icon: '/public/assets/cards/diamond.png',
+        icon: '/public/assets/cards/diamond.webp',
         title: 'Amusing Casino Games',
         description: 'A lot of entertainment games, from the classics to the newest titles. ',
       },
       {
-        icon: '/public/assets/cards/diamond.png',
+        icon: '/public/assets/cards/diamond.webp',
         title: 'Without Any Risk',
         description: 'Without downloading any program, just push the button and play!',
       },
       {
-        icon: '/public/assets/cards/diamond.png',
+        icon: '/public/assets/cards/diamond.webp',
         title: 'A Great Community of Players',
         description: 'This place is for sharing and competing with hundreds of gamers online.',
       },
       {
-        icon: '/public/assets/cards/diamond.png',
+        icon: '/public/assets/cards/diamond.webp',
         title: 'Unrestricted Access',
         description: 'Play your favorite social casino game anytime and anywhere you want.',
       },
       {
-        icon: '/public/assets/cards/diamond.png',
+        icon: '/public/assets/cards/diamond.webp',
         title: 'It’s Completely Free',
         description: 'Fun in your leisure time, while playing without betting real money.',
       },

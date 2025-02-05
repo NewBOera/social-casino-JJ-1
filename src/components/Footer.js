@@ -35,7 +35,7 @@ export class Footer extends LitElement {
           <div class="flex flex-col items-center gap-6 py-5 text-center text-white lg:py-10">
             <div class="flex flex-col gap-6 md:flex-row md:justify-between">
               <div class="flex justify-center lg:w-2/12 lg:items-start">
-                <img src="/public/assets/footer/logo.png" alt="Logo" class="object-contain" />
+                <img src="/public/assets/footer/logo.webp" alt="Logo" class="object-contain" />
               </div>
 
               <div class="lg:w-3/12">

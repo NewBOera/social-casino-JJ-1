@@ -58,7 +58,11 @@ export class Hero extends LitElement {
           </article>
 
           <article class="lg:w-5/12">
-            <img src="/public/assets/hero/vintage-gold.png" alt="Hero Image" class="h-auto w-full max-w-[320px] object-contain lg:relative lg:z-20 lg:-ml-36 lg:max-w-[550px] xl:-ml-52 xl:w-[800px]" />
+            <img
+              src="/public/assets/hero/vintage-gold.webp"
+              alt="Hero Image"
+              class="h-auto w-full max-w-[320px] object-contain lg:relative lg:z-20 lg:-ml-36 lg:max-w-[550px] xl:-ml-52 xl:w-[800px]"
+            />
           </article>
         </div>
       </section>
