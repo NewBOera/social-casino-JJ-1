@@ -3,14 +3,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        purple: '#6028A5',
-        black: '#0F0F0FD9',
-        whitef: ' #0F0F0FD9',
+        golden: '#FEE299',
       },
 
       fontFamily: {
-        Instrument: ['instrument-serif', 'sans-serif'],
-        Poppins: ['poppins', 'sans-serif'],
+        Kulim: ['Kulim Park', 'sans-serif'],
       },
     },
   },

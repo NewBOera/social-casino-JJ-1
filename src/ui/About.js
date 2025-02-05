@@ -11,12 +11,12 @@ export class About extends LitElement {
 
   render() {
     return html`
-      <section id="about-section" class="flex justify-center items-center">
-        <div class="sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] w-full px-4 sm:px-6 md:px-8 lg:px-10">
-          <div class="border-[1px] border-[#0F0F0F1A] rounded-xl p-6 lg:p-8 flex flex-col gap-4">
-            <h2 class="font-medium text-lg xl:text-2xl">At Best 10 UK Spots we have meticulously curated a selection of the top casino venues in Birmingham</h2>
+      <section id="about-section" class="flex items-center justify-center">
+        <div class="w-full px-4 sm:w-[640px] sm:px-6 md:w-[768px] md:px-8 lg:w-[1024px] lg:px-10 xl:w-[1280px] 2xl:w-[1300px]">
+          <div class="flex flex-col gap-4 rounded-xl border-[1px] border-[#0F0F0F1A] p-6 lg:p-8">
+            <h2 class="text-lg font-medium xl:text-2xl">At Best 10 UK Spots we have meticulously curated a selection of the top casino venues in Birmingham</h2>
 
-            <p class="text-base font-normal lg:text-lg xl:text-xl xl:leading-relaxed">
+            <p class="kyiv-font text-base lg:text-lg xl:text-xl xl:leading-relaxed">
               Providing you with a comprehensive array of its services, amenities and details available in one single place. The comprehensive range of gaming venues in this Midlands town is testament
               to its thriving entertainment scene.
             </p>
