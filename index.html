@@ -33,6 +33,7 @@
     <script src="/src/ui/About.js" type="module"></script>
     <script src="/src/ui/Cards.js" type="module"></script>
     <script src="/src/ui/Games.js" type="module"></script>
+    <script src="/src/ui/Contact.js" type="module"></script>
   </head>
   <body>
     <!-- <div class="age-verification" id="ageVerification">
@@ -58,22 +59,240 @@
       </div>
     </div> -->
 
+    <div id="thank-you" class="fixed inset-0 z-50 flex hidden h-screen items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm">
+      <div class="m-4 w-full max-w-2xl rounded-3xl bg-white p-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-6">
+            <div class="mb-4 flex h-16 w-full items-center justify-center">
+              <img src="/public/assets/thank-you.png" class="size-12 object-contain" alt="" />
+            </div>
+            <h2 class="font-Kulim mb-4 text-2xl font-semibold">Thank you</h2>
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              We appreciate your time, your message has been received.
+              <br />
+              We look forward to helping you as soon as possible.
+            </p>
+            <button onclick="closeThankYouModal()" class="font-Kulim rounded-full bg-red-500 px-6 py-3 text-sm text-white transition-all duration-200 hover:scale-95 hover:bg-red-600 lg:text-base">
+              Accept
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="disclaimer" class="fixed inset-0 z-50 flex hidden h-screen items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm">
+      <div class="relative m-4 h-screen max-h-[600px] w-full max-w-[900px] overflow-y-auto rounded-3xl bg-white p-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-6">
+            <button onclick="closeModalLegals('disclaimer')" class="absolute right-0 top-0 m-4">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBkPSJtMTIuNTkzIDIzLjI1OGwtLjAxMS4wMDJsLS4wNzEuMDM1bC0uMDIuMDA0bC0uMDE0LS4wMDRsLS4wNzEtLjAzNXEtLjAxNi0uMDA1LS4wMjQuMDA1bC0uMDA0LjAxbC0uMDE3LjQyOGwuMDA1LjAybC4wMS4wMTNsLjEwNC4wNzRsLjAxNS4wMDRsLjAxMi0uMDA0bC4xMDQtLjA3NGwuMDEyLS4wMTZsLjAwNC0uMDE3bC0uMDE3LS40MjdxLS4wMDQtLjAxNi0uMDE3LS4wMThtLjI2NS0uMTEzbC0uMDEzLjAwMmwtLjE4NS4wOTNsLS4wMS4wMWwtLjAwMy4wMTFsLjAxOC40M2wuMDA1LjAxMmwuMDA4LjAwN2wuMjAxLjA5M3EuMDE5LjAwNS4wMjktLjAwOGwuMDA0LS4wMTRsLS4wMzQtLjYxNHEtLjAwNS0uMDE4LS4wMi0uMDIybS0uNzE1LjAwMmEuMDIuMDIgMCAwIDAtLjAyNy4wMDZsLS4wMDYuMDE0bC0uMDM0LjYxNHEuMDAxLjAxOC4wMTcuMDI0bC4wMTUtLjAwMmwuMjAxLS4wOTNsLjAxLS4wMDhsLjAwNC0uMDExbC4wMTctLjQzbC0uMDAzLS4wMTJsLS4wMS0uMDF6Ii8+PHBhdGggZmlsbD0iIzAyMTExQiIgZD0iTTEyIDJjNS41MjMgMCAxMCA0LjQ3NyAxMCAxMHMtNC40NzcgMTAtMTAgMTBTMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJNOS44NzkgOC40NjRhMSAxIDAgMCAwLTEuNDk4IDEuMzJsLjA4NC4wOTVsMi4xMiAyLjEybC0yLjEyIDIuMTIyYTEgMSAwIDAgMCAxLjMyIDEuNDk4bC4wOTQtLjA4M0wxMiAxMy40MTRsMi4xMjEgMi4xMjJhMSAxIDAgMCAwIDEuNDk4LTEuMzJsLS4wODMtLjA5NUwxMy40MTQgMTJsMi4xMjItMi4xMjFhMSAxIDAgMCAwLTEuMzItMS40OThsLS4wOTUuMDgzTDEyIDEwLjU4NnoiLz48L2c+PC9zdmc+"
+                class="size-8 object-contain"
+                alt=""
+              />
+            </button>
+
+            <h2 class="font-Kulim mb-4 text-lg font-semibold lg:text-xl">DISCLAIMER</h2>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              This platform was created for entertainment purposes only, we ensure the accuracy of the information in this site is legally valid. Please avoid using our platform [change_DOMAIN] in
+              case that social casino games are illegal in your locality. To access this site, it’s mandatory to verify your age, you must be 18 years of age or older, as we comply with local
+              regulations, advocating for responsible gaming. We strongly advise all users to obtain legal counsel before using this platform in their local jurisdiction, since we do not support
+              gambling. This platform was created for entertainment purposes only, we ensure the accuracy of the information in this site is legally valid. Please avoid using our platform
+              [change_DOMAIN] in case that social casino games are illegal in your locality. To access this site, it’s mandatory to verify your age, you must be 18 years of age or older, as we comply
+              with local regulations, advocating for responsible gaming. We strongly advise all users to obtain legal counsel before using this platform in their local jurisdiction, since we do not
+              support gambling. This platform was created for entertainment purposes only, we ensure the accuracy of the information in this site is legally valid. Please avoid using our platform
+              [change_DOMAIN] in case that social casino games are illegal in your locality. To access this site, it’s mandatory to verify your age, you must be 18 years of age or older, as we comply
+              with local regulations, advocating for responsible gaming. We strongly advise all users to obtain legal counsel before using this platform in their local jurisdiction, since we do not
+              support gambling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="privacy-policy" class="fixed inset-0 z-50 flex hidden h-screen items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm">
+      <div class="relative m-4 h-screen max-h-[600px] w-full max-w-[900px] overflow-y-auto rounded-3xl bg-white p-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-6">
+            <button onclick="closeModalLegals('privacy-policy')" class="absolute right-0 top-0 m-4">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBkPSJtMTIuNTkzIDIzLjI1OGwtLjAxMS4wMDJsLS4wNzEuMDM1bC0uMDIuMDA0bC0uMDE0LS4wMDRsLS4wNzEtLjAzNXEtLjAxNi0uMDA1LS4wMjQuMDA1bC0uMDA0LjAxbC0uMDE3LjQyOGwuMDA1LjAybC4wMS4wMTNsLjEwNC4wNzRsLjAxNS4wMDRsLjAxMi0uMDA0bC4xMDQtLjA3NGwuMDEyLS4wMTZsLjAwNC0uMDE3bC0uMDE3LS40MjdxLS4wMDQtLjAxNi0uMDE3LS4wMThtLjI2NS0uMTEzbC0uMDEzLjAwMmwtLjE4NS4wOTNsLS4wMS4wMWwtLjAwMy4wMTFsLjAxOC40M2wuMDA1LjAxMmwuMDA4LjAwN2wuMjAxLjA5M3EuMDE5LjAwNS4wMjktLjAwOGwuMDA0LS4wMTRsLS4wMzQtLjYxNHEtLjAwNS0uMDE4LS4wMi0uMDIybS0uNzE1LjAwMmEuMDIuMDIgMCAwIDAtLjAyNy4wMDZsLS4wMDYuMDE0bC0uMDM0LjYxNHEuMDAxLjAxOC4wMTcuMDI0bC4wMTUtLjAwMmwuMjAxLS4wOTNsLjAxLS4wMDhsLjAwNC0uMDExbC4wMTctLjQzbC0uMDAzLS4wMTJsLS4wMS0uMDF6Ii8+PHBhdGggZmlsbD0iIzAyMTExQiIgZD0iTTEyIDJjNS41MjMgMCAxMCA0LjQ3NyAxMCAxMHMtNC40NzcgMTAtMTAgMTBTMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJNOS44NzkgOC40NjRhMSAxIDAgMCAwLTEuNDk4IDEuMzJsLjA4NC4wOTVsMi4xMiAyLjEybC0yLjEyIDIuMTIyYTEgMSAwIDAgMCAxLjMyIDEuNDk4bC4wOTQtLjA4M0wxMiAxMy40MTRsMi4xMjEgMi4xMjJhMSAxIDAgMCAwIDEuNDk4LTEuMzJsLS4wODMtLjA5NUwxMy40MTQgMTJsMi4xMjItMi4xMjFhMSAxIDAgMCAwLTEuMzItMS40OThsLS4wOTUuMDgzTDEyIDEwLjU4NnoiLz48L2c+PC9zdmc+"
+                class="size-8 object-contain"
+                alt=""
+              />
+            </button>
+
+            <h2 class="font-Kulim mb-4 text-lg font-semibold lg:text-xl">PRIVACY POLICY</h2>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              This Privacy Policy describes how we collect and manage information of the users. This information only applies for data obtained from the site [change_DOMAIN], its services and
+              products. For third party services, other services that [change_COMPANY] or its staff don’t control or are beyond our operational locations, this Policy doesn’t apply. 
+            </p>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              The term “You” refers to any individual user who accesses or uses this site. We refer to [change_DOMAIN] as the “platform”, “website” or “site”. The terms “our”, “us” and “we” also refer
+              to [change_COMPANY].
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Data Use and Collection</h5>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              To access, engage or use our site, we may ask you to provide some personal information (such as your name, email address or phone number). This information may be gathered with other
+              data collected from our business partners, such as IP addresses, cookie details, and site requests, could be collected from your browser. We may employ other services like Google
+              Analytics and similar tools to analyze marketing data, to track website traffic. The access is strictly limited to users over 18 years of age.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Transfer and Disclosure of Information</h5>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              [change COMPANY] is compelled to our partners with confidentiality agreements or those who work on our behalf.  They may use your data to provide you with customized offers.  Our
+              partners cannot share your personal information on their sole behalf. We won’t transfer your data, unless the following situations occur:
+            </p>
+
+            <ul class="font-Kulim mb-6 space-y-2 text-sm lg:text-base">
+              <li>
+                <p>- You engaged directly or indirectly with our third party business partners.</p>
+                <p>- When there is suspicious or illegal activity or violation of the Terms and Conditions.</p>
+                <p>- In case an acquisition or merger occurs, you’ll be notified.</p>
+              </li>
+            </ul>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              Also note: Our website exposes you to targeted advertising because advertisers believe you fit their targeting requirements. Advertisers may cater to various sectors such as social
+              casinos, travel agencies, and investment services.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Cookies</h5>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              Our website uses cookies to track your activities and preferences as you browse our platform. Cookies are data files generated by a website and stored at your web browser when you enter
+              any particular site. We may also access and store cookies on your device.
+            </p>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              Most browsers automatically accept cookies, but users can manage those cookies in their browser at their convenience to explore the site. At [change_DOMAIN] we may use cookies to track
+              clicks on third-party links on this website and through promotional emails. This Privacy Policy does not govern external cookies from our affiliates. 
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Coverage of Security and Privacy</h5>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              Access to your personal information, including your IP address, is limited to our authorized staff in order to maintain compliance with internal operations and to give you the best
+              experience possible. In compliance with applicable rules and regulations, your personal data is protected using state-of-the-art encryption. We might additionally use SSL encryption to
+              protect the transmission of statistics.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Changes and Updates</h5>
+
+            <p class="font-Kulim text-sm lg:text-base">
+              We may change this Privacy Policy. If the processing of your data is significantly modified and directly affects you, we’ll notify you through email and will be posted on our website as
+              well.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="terms-conditions" class="fixed inset-0 z-50 flex h-screen items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm">
+      <div class="relative m-4 h-screen max-h-[600px] w-full max-w-[900px] overflow-y-auto rounded-3xl bg-white p-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-6">
+            <button onclick="closeModalLegals('terms-conditions')" class="absolute right-0 top-0 m-4">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBkPSJtMTIuNTkzIDIzLjI1OGwtLjAxMS4wMDJsLS4wNzEuMDM1bC0uMDIuMDA0bC0uMDE0LS4wMDRsLS4wNzEtLjAzNXEtLjAxNi0uMDA1LS4wMjQuMDA1bC0uMDA0LjAxbC0uMDE3LjQyOGwuMDA1LjAybC4wMS4wMTNsLjEwNC4wNzRsLjAxNS4wMDRsLjAxMi0uMDA0bC4xMDQtLjA3NGwuMDEyLS4wMTZsLjAwNC0uMDE3bC0uMDE3LS40MjdxLS4wMDQtLjAxNi0uMDE3LS4wMThtLjI2NS0uMTEzbC0uMDEzLjAwMmwtLjE4NS4wOTNsLS4wMS4wMWwtLjAwMy4wMTFsLjAxOC40M2wuMDA1LjAxMmwuMDA4LjAwN2wuMjAxLjA5M3EuMDE5LjAwNS4wMjktLjAwOGwuMDA0LS4wMTRsLS4wMzQtLjYxNHEtLjAwNS0uMDE4LS4wMi0uMDIybS0uNzE1LjAwMmEuMDIuMDIgMCAwIDAtLjAyNy4wMDZsLS4wMDYuMDE0bC0uMDM0LjYxNHEuMDAxLjAxOC4wMTcuMDI0bC4wMTUtLjAwMmwuMjAxLS4wOTNsLjAxLS4wMDhsLjAwNC0uMDExbC4wMTctLjQzbC0uMDAzLS4wMTJsLS4wMS0uMDF6Ii8+PHBhdGggZmlsbD0iIzAyMTExQiIgZD0iTTEyIDJjNS41MjMgMCAxMCA0LjQ3NyAxMCAxMHMtNC40NzcgMTAtMTAgMTBTMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJNOS44NzkgOC40NjRhMSAxIDAgMCAwLTEuNDk4IDEuMzJsLjA4NC4wOTVsMi4xMiAyLjEybC0yLjEyIDIuMTIyYTEgMSAwIDAgMCAxLjMyIDEuNDk4bC4wOTQtLjA4M0wxMiAxMy40MTRsMi4xMjEgMi4xMjJhMSAxIDAgMCAwIDEuNDk4LTEuMzJsLS4wODMtLjA5NUwxMy40MTQgMTJsMi4xMjItMi4xMjFhMSAxIDAgMCAwLTEuMzItMS40OThsLS4wOTUuMDgzTDEyIDEwLjU4NnoiLz48L2c+PC9zdmc+"
+                class="size-8 object-contain"
+                alt=""
+              />
+            </button>
+
+            <h2 class="font-Kulim mb-4 text-lg font-semibold lg:text-xl">TERMS AND CONDITIONS</h2>
+
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              [change_COMPANY] describes any obligations it may have to you in relation to compliance. Before using our website, you must be aware of the laws that apply in your local region. If you
+              have any issues concerning your rights and responsibilities under these Terms and Conditions, we advise you to obtain expert and legal counsel.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Basis</h5>
+            <p class="font-Kulim mb-6 text-sm lg:text-base">These Terms and Conditions apply to the legal relationship between [change_COMPANY] and the users of our website or platform.</p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Definitions and Interpretation</h5>
+            <p class="font-Kulim mb-6 text-sm lg:text-base">This term includes the meanings that govern the users' usage of [change_DOMAIN]:</p>
+            <ul class="font-Kulim mb-6 text-sm lg:text-base">
+              <li class="mb-2">- "Agreement" refers Terms and Conditions, Privacy Policy, Cookies Policy, Advertising Terms and Website Rules.</li>
+              <li class="mb-2">- "Devices" includes but it's not limited to desktops, laptops, smartphones, tablets, cell phones or another devices.</li>
+            </ul>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Acceptance of the General Terms and Conditions</h5>
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              When a user creates an account at [change_DOMAIN], they are acknowledging that they have read, comprehended, and agreed to these Terms and Conditions, which may be updated from time to
+              time, and that they govern the usage of our services. Verifying that you are 18 or of legal age in your local jurisdiction is required.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Changes to Terms and Conditions</h5>
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              A notification will be sent to all the users registered in our platform when Terms and Conditions are modified significantly. They will receive the updated Terms and Conditions after
+              receiving such notification in order to use our services once more. We maintain the right to change the terms of its scope of service, in whole or in part.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Personal Information of the Players</h5>
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              Information we may ask for is first name, last name, email address, date of birth, address, phone number and language of your choice. All the players must ensure that all information
+              provided to us is accurate and up-to-date.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Age Verification and Identification</h5>
+            <p class="font-Kulim mb-6 text-sm lg:text-base">
+              The access to this website and its services is strictly limited to persons above the age of 18 years. To stop minors from using the website, [change_COMPANY] has the right to ask for
+              proof of the user's age and legal identification at any time.
+            </p>
+
+            <h5 class="font-Kulim mb-6 text-sm font-semibold lg:text-base">Our Rights and Obligations</h5>
+            <p class="font-Kulim text-sm lg:text-base">
+              [change_COMPANY] may use your personal information to provide you with access to our services and carry out essential tasks pertaining to your user experience. Also, we might use it to
+              inform you of any intriguing changes, new services, or offers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <navbar-mobile is-landing="true"></navbar-mobile>
     <navbar-desktop is-landing="true"></navbar-desktop>
 
-    <main class="flex flex-col gap-10 md:gap-12 lg:gap-14">
+    <main class="flex flex-col gap-14 md:gap-12 lg:gap-14">
       <div id="hero-section">
         <hero-section></hero-section>
       </div>
 
-      <div id="about-section">
+      <div id="about-section" class="relative grid place-content-center overflow-x-hidden">
         <about-section></about-section>
         <cards-section></cards-section>
         <games-section></games-section>
       </div>
+
+      <div id="contact-us-section">
+        <booking-form></booking-form>
+      </div>
     </main>
 
     <footer-element is-landing="true"></footer-element>
+
+    <script>
+      function closeThankYouModal() {
+        const modal = document.getElementById('thank-you');
+        if (modal) {
+          modal.classList.add('hidden');
+        }
+      }
+
+      function closeModalLegals(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('hidden');
+        }
+      }
+    </script>
 
     <script>
       window.addEventListener('load', () => {

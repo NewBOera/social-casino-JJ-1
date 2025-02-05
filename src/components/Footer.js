@@ -16,6 +16,14 @@ export class Footer extends LitElement {
     super();
   }
 
+  openModalLegals(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
   createRenderRoot() {
     return this;
   }
@@ -26,11 +34,11 @@ export class Footer extends LitElement {
         <div class="w-full px-4 sm:w-[640px] sm:px-6 md:w-[768px] md:px-8 lg:w-[1024px] lg:px-10 xl:w-[1280px] 2xl:w-[1300px]">
           <div class="flex flex-col items-center gap-6 py-5 text-center text-white lg:py-10">
             <div class="flex flex-col gap-6 md:flex-row md:justify-between">
-              <div class="bg-red-300 lg:w-[10%]">
+              <div class="lg:w-2/12">
                 <img src="/public/assets/footer/logo.png" alt="Logo" />
               </div>
 
-              <div class="lg:w-[25%]">
+              <div class="lg:w-3/12">
                 <h5 class="mb-3 font-bold">Contact Information</h5>
                 <ul class="flex flex-col gap-5">
                   <li>
@@ -45,22 +53,22 @@ export class Footer extends LitElement {
                 </ul>
               </div>
 
-              <div class="lg:w-[25%]">
+              <div class="lg:w-3/12">
                 <h5 class="mb-3 font-bold">Useful Links</h5>
                 <ul class="flex flex-col gap-5">
                   <li>
-                    <span>Name: [change name]</span>
+                    <span @click="${() => this.openModalLegals('disclaimer')}" class="cursor-pointer">Disclaimer</span>
                   </li>
                   <li>
-                    <span>Address: Lorem ipsum</span>
+                    <span @click="${() => this.openModalLegals('privacy-policy')}" class="cursor-pointer">Privacy Policy</span>
                   </li>
                   <li>
-                    <span>Email: Lorem ipsum</span>
+                    <span @click="${() => this.openModalLegals('terms-conditions')}" class="cursor-pointer">Terms and Conditions</span>
                   </li>
                 </ul>
               </div>
 
-              <p class="hidden lg:block lg:w-[40%]">
+              <p class="hidden lg:!block lg:w-4/12">
                 Always remember to take your gaming with caution and responsibility. At [change_NAME] we want you to have fun in a safe manner. In order to prevent issues with your wellbeing and
                 health we encourage you to measure your time gaming online. Whenever you feel that your gaming habits are growing negatively, we strongly suggest that you seek professional
                 help immediately.
@@ -71,11 +79,6 @@ export class Footer extends LitElement {
               we encourage you to measure your time gaming online. Whenever you feel that your gaming habits are growing negatively, we strongly suggest that you seek professional help immediately.
             </p>
           </div>
-        </div>
-      </footer>
-      <footer id="footer-section" class="kyiv-font flex items-center justify-center bg-[#1A1A1D]">
-        <div class="w-full px-4 text-white sm:w-[640px] sm:px-6 md:w-[768px] md:px-8 lg:w-[1024px] lg:px-10 xl:w-[1280px] 2xl:w-[1300px]">
-          <div class="p-8">[change name]</div>
         </div>
       </footer>
     `;
